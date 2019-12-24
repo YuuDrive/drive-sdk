@@ -1,0 +1,21 @@
+{
+    "name": "yuudrive/drive-sdk",
+    "description": "Google Drive Sharer SDK",
+    "type": "library",
+    "require": {},
+    "autoload": {
+        "psr-4" :{
+          "YuuDrive\\DriveSDK\\": "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "YuuDrive",
+            "email": "dev@yuudrive.me"
+        }
+    ]
+}
