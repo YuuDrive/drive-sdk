@@ -1,9 +1,9 @@
-![Packagist Version](https://img.shields.io/packagist/v/yuudrive/drive-sdk?style=flat-square)
-![Packagist](https://img.shields.io/packagist/l/yuudrive/drive-sdk?style=flat-square)
-![Packagist](https://img.shields.io/packagist/dt/yuudrive/drive-sdk?style=flat-square)
-
 # drive-sdk
 Google Drive Sharer Client SDK
+
+[![Version](https://img.shields.io/packagist/v/yuudrive/drive-sdk?style=flat-square "Packagist Version")](https://packagist.org/packages/yuudrive/drive-sdk "Packagist Version")
+[![LICENSE](https://img.shields.io/packagist/l/yuudrive/drive-sdk?style=flat-square "LICENSE")](https://github.com/YuuDrive/drive-sdk/blob/master/LICENSE "LICENSE")
+![Packagist](https://img.shields.io/packagist/dt/yuudrive/drive-sdk?style=flat-square)
 
 ## Instalation
 ```bash
