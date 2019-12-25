@@ -55,9 +55,79 @@ $client->revokeAccessToken($access_token);
 ```
 
 ### Account
--
+#### Get Profile info
+```php
+// passing access token parameter
+$client->profile($access_token);
+
+// OR
+
+$client->setAccessToken($access_token);
+$profile = $client->profile()->getResponse();
+
+// attributes:
+$profile->getId(); // get User id
+$profile->getEmail(); // user email
+$profile->getName(); // name
+$profile->getPicture(); // profile picture
+```
 ### File
--
+#### Get File info
+```php
+$client->setAccessToken($access_token);
+$file = $client->getFile($file_id)->getResponse();
+
+//attributes:
+$file->getId(); // file id
+$file->getName(); // file name
+$file->getSize(); // file size
+$file->getExtention(); // file extention
+$file->getChecksum(); // file checksum
+```
+#### Get File list
+```php
+$client->setAccessToken($access_token);
+$files = $client->getFiles()->getResponse();
+
+// only return the file list
+$files->showFileOnly();
+
+// only return the folder list
+$files->showFolderOnly();
+
+```
+
 ### Folder
--
+#### Create Folder
+```php
+$client->setAccessToken($access_token);
+$create_folder = $client->folder($folder_name)->setRole('reader')->setPermissionType('anyone');
+
+// to set folder color
+->colorRgb($rgb_code);
+
+// to set folder starred
+->starred(true);
+
+//execute instance
+$create_folder = $create_folder->create()->getResponse();
+
+print_r($create_folder->data); // to return object response
+```
+**Permission role list**
+The role granted by this permission. While new values may be supported in the future, the following are currently allowed: 
+- owner
+- organizer 
+- fileOrganizer 
+- commenter 
+- reader
+
+**Permission type list**
+The type of the grantee. Valid values are: 
+- user 
+- group 
+- domain 
+- anyone 
+
+
 ## Tests
