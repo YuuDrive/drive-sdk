@@ -21,8 +21,9 @@ use YuuDrive\DriveSDK\Client;
 $client_id = "YOUR_CLIENT_ID_HERE";
 $client_secret = "YOUR_SECRET_KEY_HERE";
 $developer_key = "YOUR_DEV_KEY_HERE";
+$redirect_uri = 'http://example.com/callback';
 
-$client = new Client($client_id, $client_secret, $developer_key);
+$client = new Client($client_id, $client_secret, $developer_key, $redirect_uri);
 ```
 
 ### OAuth
