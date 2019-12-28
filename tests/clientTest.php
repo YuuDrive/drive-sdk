@@ -9,8 +9,9 @@ class YuuTest extends TestCase
         $client_id = '';
         $client_secret = '';
         $developer_key = '';
+        $redirect_uri = 'http://example.com/callback';
 
-        $this->client = new Client($client_id, $client_secret, $developer_key);
+        $this->client = new Client($client_id, $client_secret, $developer_key, $redirect_uri);
     }
 
     public function testRefreshToken() {

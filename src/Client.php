@@ -31,7 +31,7 @@ class Client implements ClientInterface
         'email', 'https://www.googleapis.com/auth/drive'
     ];
     
-    public function __construct($client_id=null, $client_secret=null, $developer_key=null) {
+    public function __construct($client_id=null, $client_secret=null, $developer_key=null, $redirect_uri=null) {
         if(!$client_id) {
             throw new \YuuDrive\Exceptions\InstanceException("Client Id required");
         } elseif(!$client_secret) {
@@ -42,6 +42,7 @@ class Client implements ClientInterface
             $this->client_id = $client_id;
             $this->client_secret = $client_secret;
             $this->developer_key = $developer_key;
+            if($redirect_uri) $this->redirect_uri = $redirect_uri;
         }
     }
 
